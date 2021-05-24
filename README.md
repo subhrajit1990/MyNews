@@ -1,1 +1,1 @@
-# MyNews
+# SplitMyBill_UI
