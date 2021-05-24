@@ -14,7 +14,7 @@ export default class NewsFeeder extends CommonFunctions {
   	};
 
   	return this.serverCall("expenses/api/createGroup",extraParameters); */
-		this.rssFeeder("https://timesofindia.indiatimes.com/rssfeeds/296589292.cms");
+		this.rssFeeder("GET https://newsapi.org/v2/everything?q=keyword&apiKey=d54f337feac8491db583ec06fd854eef");
 	console.log("yes");
 	return false;
 		
