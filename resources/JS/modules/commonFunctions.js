@@ -33,13 +33,13 @@ class CommonFunctions{
 	}
 	
 	rssFeeder(RSS_URL){
-	
-		fetch(RSS_URL)
-  .then(response => response.text())
-  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-  .then(data => {
-    console.log(data);
-  });
+		return fetch(RSS_URL)
+    		.then(response => response.json())
+  		.then(json => {
+    			console.log('parsed json', json) // access json.body here
+  		})
+    		.catch(error => console.log(error))
+		
 	
 	}
 }
