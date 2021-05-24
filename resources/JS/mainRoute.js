@@ -15,7 +15,7 @@ class MainRoute{
  	let newsFetchStatus = false;
 	try{
    		const news = new NewsFeeder( payLoad );
-   		var status = group.newsFetch();
+   		var status = news.newsFetch();
 		console.log( status  );
 		
 	} catch(err){
