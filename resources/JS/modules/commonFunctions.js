@@ -31,6 +31,17 @@ class CommonFunctions{
     		.catch(error => console.log(error))
 
 	}
+	
+	rssFeeder(RSS_URL){
+	
+		fetch(RSS_URL)
+  .then(response => response.text())
+  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+  .then(data => {
+    console.log(data);
+  });
+	
+	}
 }
  
 export default CommonFunctions
